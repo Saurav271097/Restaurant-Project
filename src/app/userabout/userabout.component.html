@@ -1,0 +1,78 @@
+<!-- ======= Header ======= -->
+
+<header id="header" class="d-flex align-items-center">
+  
+  
+  <div class="container d-flex align-items-center justify-content-between">
+
+    <h1 class="logo"><a href="/userhome">Russo's Kitchen<span>.</span></a></h1>
+    <!-- Uncomment below if you prefer to use an image logo -->
+    <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>-->
+
+    <nav id="navbar" class="navbar">
+      <ul>
+
+        <li><a class="nav-link scrollto active" href="" routerLink="/userhome" routerLinkActive="active">Home</a></li>
+        <!-- <li><a class="nav-link scrollto" href="" routerLink="/userabout" routerLinkActive="active">About</a></li> -->
+        <li><a class="nav-link scrollto" href="" routerLink="/usermenu" routerLinkActive="active">Menu</a></li>
+        <li><a class="nav-link scrollto " href="" routerLink="/userspecials" routerLinkActive="active">Specials</a></li>
+        <li><a class="nav-link scrollto " href="" routerLink="/userbooktable" routerLinkActive="active">Book a Table</a></li>
+        <li class="dropdown"><span>More</span> <i class="bi bi-chevron-down"></i>
+          <ul>
+              <li class="dropdown gall"><a class="nav-link scrollto gal"><span>Gallery</span> <i class="bi bi-chevron-right"></i></a>
+                  <ul>
+                      <li><a class="nav-link scrollto dropdown gall" href="" routerLink="/userevents" routerLinkActive="active">Events</a></li>
+                      <li><a class="nav-link scrollto dropdown gall" href="" routerLink="/userchefs" routerLinkActive="active">Chefs</a></li>
+                  </ul>
+              </li>
+              <li><a href="" class="nav-link scrollto dropdown gall" routerLink="/userreviews" routerLinkActive="active"><span>Reviews</span>
+                  <i class="bi bi-chevron-right"></i></a>
+              </ul>
+          </li> 
+          <li><a class="nav-link scrollto " href="" routerLink="/login" routerLinkActive="active">Logout</a></li>
+          <!-- <li><a class="nav-link scrollto " href="" routerLink="/login" routerLinkActive="active">Hello {{fname}}</a></li> -->
+
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav>
+    <button routerLink="/addtocart" class="btn btn-primary cart-icon">
+      <i style="font-size: 20px;" class="fas fa-cart-plus"></i>
+      <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+    </button>
+
+    <!-- <a href="" class="get-started-btn scrollto" routerLink="login" routerLinkActive="active">Login</a>
+            <a href="" class="get-started-btn scrollto" routerLink="booktable" routerLinkActive="active">Book a Table</a> -->
+
+
+  </div>
+</header><!-- End Header -->
+
+<main id="main">    
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="section-title">
+          <h2>About UsEr</h2>
+          <h3 class="russo"><strong>Russo's Kitchen</strong></h3>
+        </div>
+        <div class="row content">
+          <div class="col-lg-6">
+            <p>
+              Initially opened as "The cherry pie" and then in 1983 re-branded as Marlowe's Restaurant along side the opening of Marlowe theatre. In 2016 our restaurant was then changed into modern British cuisine Since then we have now acquired the title of top 3 modern British restaurants in Canterbury and will continue to produce quality dishes pursuing better rankings and give the good old Marlowe's the recognition it deserves.
+            </p>
+            <i class="ri-check-double-line"></i> Set in the heart of Canterbury's bustling high street and just a stone throw from the cathedral, Marlowe's restaurant offers something a bit different to other eateries in the area
+            <i class="ri-check-double-line"></i> Named after the city’s famous playwright and just yards from the theatre, Marlowes makes a great place to grab something to eat before or after a show.
+            <i class="ri-check-double-line"></i> We value quality over speed, however if you are in the rush please let us know
+            <i class="ri-check-double-line"></i> At some stage in the 20th century it was converted into a restaurant and it has been so for over 50 years, earning the title of oldest restaurant in the city.             
+            <i class="ri-check-double-line"></i> Restaurants with strong branding—including their logo, images, and "voice" or writing style—often have strong customer loyalty. Customers want to learn about your restaurant and feel connected to your story. And customers who are connected are more likely to come back.
+            <i class="ri-check-double-line"></i> Russo's Kitchen provides a sleek and sexy space for world-class cuisine. Taking cues from a European library, with comfortable banquettes, marble surfaces and crystal chandeliers, the dining room is a chic but comfortable setting perfect for any experience. And the sophistication doesn’t stop at the decor. A smart revamp of the conventional steakhouse, the menu is built around subtle twists that never skimp on luxury. Meat and seafood offerings, unparalleled in quality, complement highly personalized touches. No high-minded rules or stuffy service here — just contemporary fine dining with a distinct twist.  
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("/assets/about.jpg");'>&nbsp;</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- End About Us Section -->
+

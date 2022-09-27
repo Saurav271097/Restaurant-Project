@@ -1,0 +1,132 @@
+<!-- ======= Header ======= -->
+<div class="bgimg">
+  <header id="header" class="d-flex align-items-center">
+
+
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="/userhome">Russo's Kitchen<span>.</span></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+
+          <li><a class="nav-link scrollto active" href="" routerLink="/userhome" routerLinkActive="active">Home</a></li>
+          <!-- <li><a class="nav-link scrollto" href="" routerLink="/userabout" routerLinkActive="active">About</a></li> -->
+          <li><a class="nav-link scrollto" href="" routerLink="/usermenu" routerLinkActive="active">Menu</a></li>
+          <li><a class="nav-link scrollto " href="" routerLink="/userspecials" routerLinkActive="active">Specials</a>
+          </li>
+          <li><a class="nav-link scrollto " href="" routerLink="/userbooktable" routerLinkActive="active">Book a
+              Table</a></li>
+          <li class="dropdown"><span>More</span> <i class="bi bi-chevron-down"></i>
+            <ul>
+              <li class="dropdown gall"><a class="nav-link scrollto gal"><span>Gallery</span> <i
+                    class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a class="nav-link scrollto dropdown gall" href="" routerLink="/userevents"
+                      routerLinkActive="active">Events</a></li>
+                  <li><a class="nav-link scrollto dropdown gall" href="" routerLink="/userchefs"
+                      routerLinkActive="active">Chefs</a></li>
+                </ul>
+              </li>
+              <li><a href="" class="nav-link scrollto dropdown gall" routerLink="/userreviews"
+                  routerLinkActive="active"><span>Reviews</span>
+                  <i class="bi bi-chevron-right"></i></a>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto " href="" routerLink="/login" routerLinkActive="active">Logout</a></li>
+          <!-- <li><a class="nav-link scrollto " href="" routerLink="/login" routerLinkActive="active">Hello {{fname}}</a></li> -->
+
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+      <button routerLink="/addtocart" class="btn btn-primary cart-icon">
+        <i style="font-size: 20px;" class="fas fa-cart-plus"></i>
+        <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+      </button>
+
+      <!-- <a href="" class="get-started-btn scrollto" routerLink="login" routerLinkActive="active">Login</a>
+            <a href="" class="get-started-btn scrollto" routerLink="booktable" routerLinkActive="active">Book a Table</a> -->
+
+
+    </div>
+  </header><!-- End Header -->
+
+
+  <!-- ======= Book A Table Section ======= -->
+  <section id="book-a-table" class="book-a-table">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>Book a Table</h2>
+      </div>
+
+
+
+      <form #book="ngForm" (ngSubmit)="bookTable(book)" class="">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 form-group">
+            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" ngModel="name">
+            <div class="validate"></div>
+          </div>
+          <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" ngModel="email">
+            <div class="validate"></div>
+          </div>
+          <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
+            <input type="text" class="form-control" name="phone" id="phone" placeholder="Your Phone" ngModel="phone">
+            <div class="validate"></div>
+          </div>
+          <div class="col-lg-4 col-md-6 form-group mt-3">
+            <input type="date" name="date" class="form-control" id="date" placeholder="Date" ngModel="date">
+            <div class="validate"></div>
+          </div>
+          <div class="col-lg-4 col-md-6 form-group mt-3">
+            <input type="time" class="form-control" name="time" id="time" placeholder="Time" ngModel="time">
+            <div class="validate"></div>
+          </div>
+          <div class="col-lg-4 col-md-6 form-group mt-3">
+            <input type="number" class="form-control" required minlength="1" maxlength="2" min="1" max="21" required
+              pattern="^$|^([0-9]|[1-9]|[1][0])?"
+              (change)="rateInput < 0 ? rateInput = 1 : rateInput; rateInput > 21 ? rateInput = 0 : rateInput;"
+              name="people" id="people" placeholder="# of people" ngModel="people">
+            <div class="validate"></div>
+          </div>
+          <div class="col-lg-4 col-md-6 form-group mt-3 text-center">
+            <input type="number" required minlength="1" maxlength="2" class="form-control" min="1" max="21" required
+              pattern="^$|^([0-9]|[1-9]|[1][0])?"
+              (change)="rateInput < 0 ? rateInput = 1 : rateInput; rateInput > 21 ? rateInput = 0 : rateInput;"
+              name="tableno" id="tableno" placeholder="Table No. is from 0 to 21" ngModel="tableno">
+            <div class="validate"></div>
+          </div>
+
+        </div>
+        <!-- <div class="form-group mt-3">
+          <textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea>
+          <div class="validate"></div>
+        </div> -->
+        <br>
+        <!-- <div class="mb-3">
+          <div class="loading">Loading</div>
+          <div class="error-message"></div>
+          <div class="sent-message">Your booking request was sent. We will call back or send an Email to confirm your reservation. Thank you!</div>
+        </div> -->
+        <div class="text-center"><button class="btn1" type="submit">Book a Table</button></div>
+      </form>
+      <br>
+
+    </div>
+  </section><!-- End Book A Table Section -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <div>
+          <iframe style="border:0; width: 100%; height: 350px;"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
+            frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

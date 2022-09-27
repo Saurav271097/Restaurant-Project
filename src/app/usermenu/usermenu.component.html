@@ -1,0 +1,186 @@
+<!-- ======= Header ======= -->
+
+<header id="header" class="d-flex align-items-center">
+  
+  
+  <div class="container d-flex align-items-center justify-content-between">
+
+    <h1 class="logo"><a href="/userhome">Russo's Kitchen<span>.</span></a></h1>
+    <!-- Uncomment below if you prefer to use an image logo -->
+    <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>-->
+
+    <nav id="navbar" class="navbar">
+      <ul>
+
+        <li><a class="nav-link scrollto active" href="" routerLink="/userhome" routerLinkActive="active">Home</a></li>
+        <!-- <li><a class="nav-link scrollto" href="" routerLink="/userabout" routerLinkActive="active">About</a></li> -->
+        <li><a class="nav-link scrollto" href="" routerLink="/usermenu" routerLinkActive="active">Menu</a></li>
+        <li><a class="nav-link scrollto " href="" routerLink="/userspecials" routerLinkActive="active">Specials</a></li>
+        <li><a class="nav-link scrollto " href="" routerLink="/userbooktable" routerLinkActive="active">Book a Table</a></li>
+        <li class="dropdown"><span>More</span> <i class="bi bi-chevron-down"></i>
+          <ul>
+              <li class="dropdown gall"><a class="nav-link scrollto gal"><span>Gallery</span> <i class="bi bi-chevron-right"></i></a>
+                  <ul>
+                      <li><a class="nav-link scrollto dropdown gall" href="" routerLink="/userevents" routerLinkActive="active">Events</a></li>
+                      <li><a class="nav-link scrollto dropdown gall" href="" routerLink="/userchefs" routerLinkActive="active">Chefs</a></li>
+                  </ul>
+              </li>
+              <li><a href="" class="nav-link scrollto dropdown gall" routerLink="/userreviews" routerLinkActive="active"><span>Reviews</span>
+                  <i class="bi bi-chevron-right"></i></a>
+              </ul>
+          </li> 
+          <li><a class="nav-link scrollto " href="" routerLink="/login" routerLinkActive="active">Logout</a></li>
+          <!-- <li><a class="nav-link scrollto " href="" routerLink="/login" routerLinkActive="active">Hello {{fname}}</a></li> -->
+
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav>
+    <button routerLink="/addtocart" class="btn btn-primary cart-icon">
+      <i style="font-size: 20px;" class="fas fa-cart-plus"></i>
+      <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+    </button>
+
+    <!-- <a href="" class="get-started-btn scrollto" routerLink="login" routerLinkActive="active">Login</a>
+            <a href="" class="get-started-btn scrollto" routerLink="booktable" routerLinkActive="active">Book a Table</a> -->
+
+
+  </div>
+</header><!-- End Header -->
+
+<!-- ======= Menu Section ======= -->
+  <section id="menu" class="menu section-bg">
+    <div class="container um" data-aos="fade-up">
+  
+      <div class="section-title">
+        <h2>Menu</h2>
+        <p>Check Our Tasty Menu</p>
+      </div>
+  
+      <!-- <div class="row" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-lg-12 d-flex justify-content-center">
+          <ul id="menu-flters">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-starters"></li>
+            <li data-filter=".filter-salads"></li>
+            <li data-filter=".filter-specialty"></li>
+          </ul>
+        </div>
+      </div>
+  
+      <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
+  
+        <div class="col-lg-6 menu-item filter-starters">
+          <img src="assets/lobster-bisque.jpg" class="menu-img" alt="">
+          <div class="menu-content">
+            <a href="" routerLink="/user" routerLinkActive="active">Lobster Bisque</a><span>$5.95</span>
+          </div>
+          <div class="menu-ingredients">
+            Smooth and creamy, Lobster Bisque is always a crowd pleaser and has never been easier. Using lobster tails guarantees a rich and decadent bisque that comes together in only one hour!
+          </div>
+        </div>
+  
+        <div class="col-lg-6 menu-item filter-specialty">
+          <img src="assets/bread-barrel.jpg" class="menu-img" alt="">
+          <div class="menu-content">
+            <a href="" routerLink="/user" routerLinkActive="active" >Bread Barrel</a><span>$6.95</span>
+          </div>
+          <div class="menu-ingredients">
+            It makes a lovely sandwich with dry salami and mayo and even makes really good toast. I adapted it to make a 2 pound loaf using dough cycle in the breadmaker. The amounts of yeast and salt seem high but they work out very well.
+          </div>
+        </div>
+  
+        <div class="col-lg-6 menu-item filter-starters">
+          <img src="assets/cake.jpg" class="menu-img" alt="">
+          <div class="menu-content">
+            <a href="" routerLink="/user" routerLinkActive="active">Crab Cake</a><span>$7.95</span>
+          </div>
+          <div class="menu-ingredients">
+            A crab cake is a variety of fishcake that is popular in the United States. It is composed of crab meat and various other ingredients, such as bread crumbs, mayonnaise, mustard (typically prepared mustard, but sometimes mustard powder), eggs, and seasonings.
+          </div>
+        </div>
+  
+        <div class="col-lg-6 menu-item filter-salads">
+          <img src="assets/caesar.jpg" class="menu-img" alt="">
+          <div class="menu-content">
+            <a href="" routerLink="/user" routerLinkActive="active">Caesar Selections</a><span>$8.95</span>
+          </div>
+          <div class="menu-ingredients">
+            chopped romaine lettuce and garlicky croutons, tossed in a creamy dressing made with eggs, olive oil, lemon, Parmesan, Worcestershire sauce, and anchovies.
+          </div>
+        </div>
+  
+        <div class="col-lg-6 menu-item filter-specialty">
+          <img src="assets/tuscan-grilled.jpg" class="menu-img" alt="">
+          <div class="menu-content">
+            <a href="" routerLink="/user" routerLinkActive="active">Tuscan Grilled</a><span>$9.95</span>
+          </div>
+          <div class="menu-ingredients">
+            As opposed to barbecuing–which requires low fires providing long, slow cooking, and usually involves rubs, marinades or sauce brushing–Tuscan grilling is strictly about cooking over hardwood fire, without a lid to cover; and with very little in terms of ingredients, besides the hero component.
+          </div>
+        </div>
+  
+        <div class="col-lg-6 menu-item filter-starters">
+          <img src="assets/mozzarella.jpg" class="menu-img" alt="">
+          <div class="menu-content">
+            <a href="" routerLink="/user" routerLinkActive="active">Mozzarella Stick</a><span>$4.95</span>
+          </div>
+          <div class="menu-ingredients">
+            Mozzarella sticks are prepared by coating cheese strings in breadcrumbs or batter. They may be baked or fried in oil. Mozzarella sticks are usually served with tomato sauce or marinara sauce.
+          </div>
+        </div>
+  
+        <div class="col-lg-6 menu-item filter-salads">
+          <img src="assets/greek-salad.jpg" class="menu-img" alt="">
+          <div class="menu-content">
+            <a href="" routerLink="/user" routerLinkActive="active">Greek Salad</a><span>$9.95</span>
+          </div>
+          <div class="menu-ingredients">
+            Greek salad dressing is really a Greek vinaigrette as it contains olive oil, red wine vinegar, lemon juice, Dijon mustard, minced garlic cloves, dried oregano (the key ingredient) and salt and pepper
+          </div>
+        </div>
+  
+        <div class="col-lg-6 menu-item filter-salads">
+          <img src="assets/spinach-salad.jpg" class="menu-img" alt="">
+          <div class="menu-content">
+            <a href="" routerLink="/user" routerLinkActive="active">Spinach Salad</a><span>$9.95</span>
+          </div>
+          <div class="menu-ingredients">
+            Mixed greens, red leaf lettuce, green leaf lettuce and spinach all work well. Cucumber: I like adding cucumber to salad recipes because it is refreshing and adds a nice crunchy texture. Cherry Tomatoes: Grape tomatoes or sliced whole tomatoes would also work well.
+          </div>
+        </div> -->
+   
+        <!-- <div class="col-lg-6 menu-item filter-specialty">
+          <img src="assets/lobster-roll.jpg" class="menu-img" alt="">
+          <div class="menu-content">
+            <a href="" routerLink="/user" routerLinkActive="active">Lobster Roll</a><span>$12.95</span>
+          </div>
+          <div class="menu-ingredients">
+            A lobster roll is a dish native to New England. It is made of lobster meat served on a grilled hot dog-style bun. The filling may also contain butter, lemon juice, salt, and black pepper, with variants made in some parts of New England replacing the butter with mayonnaise.
+          </div>
+        </div> 
+          
+      </div>-->
+  
+      <!-- End Menu Section -->
+      <br>
+  <br>
+  <div class="container">
+    <div class="row sh">
+      <ng-container *ngFor="let item of productList">
+        
+        <div class="card col-m-3">
+          <!-- <img src="{{item.image}}" alt=""> -->
+          <h5 class="tit">{{item.title}}</h5>
+          <!-- <p class="tit">{{item.description}}</p> -->
+          <p><strong>Price:</strong>${{item.price}}</p>
+          <button class="btn btn-primary" (click)="addtocart(item)">Add to cart</button>
+        </div>
+        
+      </ng-container>
+    </div>
+    <br>
+    <br>
+    <br>
+  </div>
+</div>
+</section>

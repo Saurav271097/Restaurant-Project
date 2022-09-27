@@ -1,0 +1,69 @@
+<!-- ======= Header ======= -->
+
+<header id="header" class="d-flex align-items-center">
+  
+  
+    <div class="container d-flex align-items-center justify-content-between">
+  
+      <h1 class="logo"><a href="/userhome">Russo's Kitchen<span>.</span></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>-->
+  
+      <nav id="navbar" class="navbar">
+        <ul>
+  
+          <li><a class="nav-link scrollto active" href="" routerLink="/userhome" routerLinkActive="active">Home</a></li>
+          <!-- <li><a class="nav-link scrollto" href="" routerLink="/userabout" routerLinkActive="active">About</a></li> -->
+          <li><a class="nav-link scrollto" href="" routerLink="/usermenu" routerLinkActive="active">Menu</a></li>
+          <li><a class="nav-link scrollto " href="" routerLink="/userspecials" routerLinkActive="active">Specials</a></li>
+          <li><a class="nav-link scrollto " href="" routerLink="/userbooktable" routerLinkActive="active">Book a Table</a></li>
+          <li class="dropdown"><span>More</span> <i class="bi bi-chevron-down"></i>
+            <ul>
+                <li class="dropdown gall"><a class="nav-link scrollto gal"><span>Gallery</span> <i class="bi bi-chevron-right"></i></a>
+                    <ul>
+                        <li><a class="nav-link scrollto dropdown gall" href="" routerLink="/userevents" routerLinkActive="active">Events</a></li>
+                        <li><a class="nav-link scrollto dropdown gall" href="" routerLink="/userchefs" routerLinkActive="active">Chefs</a></li>
+                    </ul>
+                </li>
+                <li><a href="" class="nav-link scrollto dropdown gall" routerLink="/userreviews" routerLinkActive="active"><span>Reviews</span>
+                    <i class="bi bi-chevron-right"></i></a>
+                </ul>
+            </li> 
+            <li><a class="nav-link scrollto " href="" routerLink="/login" routerLinkActive="active">Logout</a></li>
+            <!-- <li><a class="nav-link scrollto " href="" routerLink="/login" routerLinkActive="active">Hello {{fname}}</a></li> -->
+
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+      <button routerLink="/addtocart" class="btn btn-primary cart-icon">
+        <i style="font-size: 20px;" class="fas fa-cart-plus"></i>
+        <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+      </button>
+  
+      <!-- <a href="" class="get-started-btn scrollto" routerLink="login" routerLinkActive="active">Login</a>
+              <a href="" class="get-started-btn scrollto" routerLink="booktable" routerLinkActive="active">Book a Table</a> -->
+  
+  
+    </div>
+  </header><!-- End Header -->
+
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex align-items-center">
+    <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
+      <div class="row">
+        <div class="col-lg-8">
+          <h1>Welcome to <span>Russo's Kitchen</span></h1>
+          <h2 class="del">Delivering great food for <strong style="color: rgba(247, 187, 85, 0.7);">more than 18 years!</strong></h2>
+
+          <div class="btns">
+           <a href="/usermenu" class="btn-menu animated fadeInUp scrollto">Our Menu</a>
+          <a href="/userbooktable" class="btn-book animated fadeInUp scrollto">Book a Table</a>
+          </div>
+        </div>
+        <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in" data-aos-delay="200">
+          <a href="https://www.youtube.com/watch?v=u6BOC7CDUTQ" class="glightbox play-btn"></a>
+        </div>
+
+      </div>
+    </div>
+  </section><!-- End Hero -->

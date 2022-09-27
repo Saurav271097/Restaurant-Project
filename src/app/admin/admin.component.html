@@ -1,0 +1,74 @@
+<br>
+<br>
+<br>
+<br>
+
+<div class="section-title log">
+    <h2>Admin Login</h2>
+</div>
+
+<div class="log">
+    
+<form #admindetail="ngForm" (ngSubmit)="insertData()">
+    <!-- Email input -->
+    <div class="form-outline mb-4">
+      <h3 class="text-danger">{{msg}}</h3><br>
+      <label class="form-label" for="form2Example1">Email address</label>
+      <input type="email" id="form2Example1" placeholder="example@xyz.com" class="form-control" name="email" [(ngModel)]="user.email" #email="ngModel" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"/>
+      <div *ngIf="email.invalid && email.touched"><small class="text-danger">Enter correct email</small></div>
+    </div>
+  
+    <!-- Password input -->
+    <div class="form-outline mb-4">
+      <label class="form-label" for="form2Example2">Password</label>
+      <input type="password" minlength="6" maxlength="16" id="form2Example2" placeholder="min 8 letters" class="form-control" name="password" #password="ngModel" [(ngModel)]="user.password"/>
+      <div *ngIf="password.touched && password.invalid"><small class="text-danger">Passowrd should not be blank</small></div>
+    </div>
+  
+    <!-- 2 column grid layout for inline styling -->
+    <div class="row mb-4">
+      <div class="col d-flex justify-content-center">
+        <!-- Checkbox -->
+        <div class="form-check">
+          <!-- <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked /> -->
+          <!-- <label class="form-check-label" for="form2Example31"> Remember me </label> -->
+        </div>
+      </div>
+  
+      <!-- <div class="col"> -->
+        <!-- Simple link -->
+        <!-- <a href="">Forgot password?</a>
+      </div> -->
+    </div>
+  
+    <!-- Submit button -->
+    <div class="btn1">
+       <p class="logi"> <button [disabled]="admindetail.form.invalid" class="btn btn-primary btn-block mb-4" type="submit">
+            <span class="go">Login</span>
+         </button></p>
+  </div>
+    <!-- Register buttons -->
+    <div class="text-center">
+      <!-- <p class="not">Not a member? <button (click)="goToPage('signup')" class="btn btn-primary btn-block mb-4 ">
+        <span class="go">Go to signup Page</span>
+     </button></p> -->
+      
+      
+      <!-- <button type="button" class="btn btn-link btn-floating mx-1">
+        <i class="fab fa-facebook-f"></i>
+      </button>
+  
+      <button type="button" class="btn btn-link btn-floating mx-1">
+        <i class="fab fa-google"></i>
+      </button>
+  
+      <button type="button" class="btn btn-link btn-floating mx-1">
+        <i class="fab fa-twitter"></i>
+      </button>
+  
+      <button type="button" class="btn btn-link btn-floating mx-1">
+        <i class="fab fa-github"></i>
+      </button> -->
+    </div>
+  </form>
+</div>

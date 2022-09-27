@@ -1,0 +1,91 @@
+<!-- Section: Design Block -->
+<section class="">
+  <div class="section-title signup">
+    <h2>Sign Up</h2>
+  </div>
+    <!-- Jumbotron -->
+    <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
+      <div class="container">
+        <div class="row gx-lg-5 align-items-center">
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <h1 class="my-5 display-3 fw-bold ls-tight">
+              Sign Up for <br />
+              <span class="text-primary">Russo's Kitchen</span>
+            </h1>
+            <p style="color: hsl(217, 10%, 50.8%)">
+              A stylish departure from steakhouse tradition, Russo's Kitchen embraces French flair without the formality, blending fine dining with unabashed fun. Guests can indulge in timeless fare, including seafood towers, richly flavorful ribeyes, classic side dishes, and house-made desserts, paired with strong cocktails and a well-curated international wine list. The gilded space features red leather banquettes, glowing chandeliers, and effervescent jazz.
+            </p>
+          </div>
+  
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <div class="card">
+              <div class="card-body py-5 px-md-5">
+                <form #signupdata="ngForm" (ngSubmit)="insertSignup(signupdata)">
+                 
+                  <!-- 2 column grid layout with text inputs for the first and last names -->
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" id="form3Example1" required minlength="2" maxlength="16" class="form-control" name="firstname" #firstname="ngModel" ngModel="firstname"/>
+                        <div *ngIf="firstname.touched && firstname.invalid"><small class="text-danger">Firstname should not be blank</small></div>
+                        <label class="form-label" for="form3Example1">First name</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" id="form3Example2" required minlength="2" maxlength="16" class="form-control" name="lastname" #lastname="ngModel" ngModel="lastname"/>
+                        <div *ngIf="lastname.touched && lastname.invalid"><small class="text-danger">Lastname should not be blank</small></div>
+                        <label class="form-label" for="form3Example2">Last name</label>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <!-- Email input -->
+                  <div class="form-outline mb-4">
+                    <input type="email" id="form3Example3" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control" name="email" placeholder="example@xyz.com" #email="ngModel" ngModel="email" />
+                    <div *ngIf="email.invalid && email.touched"><small class="text-danger">Enter correct email</small></div>
+                    <label class="form-label" for="form3Example3">Email address</label>
+                  </div>
+  
+                  <!-- Password input -->
+                  <div class="form-outline mb-4">
+                    <input type="password" id="form3Example4" required minlength="6" maxlength="16" class="form-control" name="password" placeholder="min 8 character" #password="ngModel" ngModel="password" />
+                    <div *ngIf="password.touched && password.invalid"><small class="text-danger">Passowrd should not be blank</small></div>
+                    <label class="form-label" for="form3Example4">Password</label>
+                  </div>
+  
+                  <!-- Checkbox -->
+  
+                  <!-- Submit button -->
+                  <button [disabled]="signupdata.form.invalid" class="w-100 btn btn-lg btn-primary" id="btn" type="submit"><span>Sign up</span></button>
+                  <!-- <input (click)="signup()" type="Submit" class="btn btn-primary btn-block mb-4"> -->
+
+                  <!-- Register buttons -->
+                  <!-- <div class="text-center">
+                    <p>or sign up with:</p>
+                    <button type="button" class="btn btn-link btn-floating mx-1">
+                      <i class="fab fa-facebook-f"></i>
+                    </button>
+  
+                    <button type="button" class="btn btn-link btn-floating mx-1">
+                      <i class="fab fa-google"></i>
+                    </button>
+  
+                    <button type="button" class="btn btn-link btn-floating mx-1">
+                      <i class="fab fa-twitter"></i>
+                    </button>
+  
+                    <button type="button" class="btn btn-link btn-floating mx-1">
+                      <i class="fab fa-github"></i>
+                    </button>
+                  </div> -->
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Jumbotron -->
+  </section>
+  <!-- Section: Design Block -->

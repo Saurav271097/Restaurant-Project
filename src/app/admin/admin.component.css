@@ -1,0 +1,54 @@
+.log{
+    margin-left: 480px;
+    margin-right: 480px;
+}
+
+.section-title {
+    
+    padding-bottom: 30px;
+  }
+  
+  .section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+  }
+  
+  .section-title h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #009961;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .section-title p {
+    margin-bottom: 0;
+    color: #777777;
+    font-size: 15px;
+  }
+  .btn1{
+    margin-left: 140px;
+    color: black;
+  }
+.sig{
+  color: white; 
+  font-size: large;  
+  
+}
+.btn .btn-primary{
+size: 5px;
+padding: 6px;
+}
+
+.go{
+  font-size: medium;
+}
+.logi{
+    margin-left: 10px;
+}

@@ -1,0 +1,72 @@
+
+<!-- ======= Header ======= -->
+
+<header id="header" class="d-flex align-items-center">
+  
+  
+    <div class="container d-flex align-items-center justify-content-between">
+  
+      <h1 class="logo"><a href="/adminhome">Russo's Kitchen<span>.</span></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>-->
+  
+      <nav id="navbar" class="navbar">
+        <ul>
+  
+          <li><a class="nav-link scrollto active" href="" routerLink="/adminhome" routerLinkActive="active">Home</a></li>
+          <!-- <li><a class="nav-link scrollto" href="" routerLink="/userabout" routerLinkActive="active">About</a></li> -->
+          <li><a class="nav-link scrollto" href="" routerLink="/adminmenu" routerLinkActive="active">Menu</a></li>
+          <li><a class="nav-link scrollto dropdown gall" href="" routerLink="/adminmenulist" routerLinkActive="active">Menu List</a></li>
+          <!-- <li><a class="nav-link scrollto " href="" routerLink="/userspecials" routerLinkActive="active">Specials</a></li> -->
+          <!-- <li><a class="nav-link scrollto " href="" routerLink="/userbooktable" routerLinkActive="active">Book a Table</a></li> -->
+          <!-- <li><a class="nav-link scrollto dropdown gall" href="" routerLink="/admincartlist" routerLinkActive="active">Cart List</a></li>  -->
+          <li class="dropdown gall"><a class="nav-link scrollto gal"><span>Reports</span> <i class="bi bi-chevron-right"></i></a>
+            <ul>
+             <li><a class="nav-link scrollto dropdown gall" href="" routerLink="/adminpaymentlist" routerLinkActive="active">Payment List</a></li>
+             <li><a class="nav-link scrollto dropdown gall" href="" routerLink="/admincartlist" routerLinkActive="active">Cart List</a></li>
+            
+             <li><a class="nav-link scrollto dropdown gall" href="" routerLink="/adminuserlist" routerLinkActive="active">User List</a></li> 
+             <li><a class="nav-link scrollto dropdown gall" href="" routerLink="/adminviewbook" routerLinkActive="active">Booked Table</a></li> 
+             <li><a class="nav-link scrollto dropdown gall" href="" routerLink="/adminreviewlist" routerLinkActive="active">Feedback List</a></li>
+           </ul> 
+          <li><a class="nav-link scrollto " href="" routerLink="/login" routerLinkActive="active">Logout</a></li>
+        
+  
+        </ul>
+        <!-- <i class="bi bi-list mobile-nav-toggle"></i> -->
+      </nav>
+      <!-- <button routerLink="/addtocart" class="btn btn-primary cart-icon">
+        <i style="font-size: 20px;" class="fas fa-cart-plus"></i>
+        <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+      </button> -->
+  
+      <!-- <a href="" class="get-started-btn scrollto" routerLink="login" routerLinkActive="active">Login</a>
+              <a href="" class="get-started-btn scrollto" routerLink="booktable" routerLinkActive="active">Book a Table</a> -->
+  
+  
+    </div>
+  </header><!-- End Header -->
+<br><br>
+  <h2 style="text-align:center;"> FeedBack List</h2>
+  <table class="table table-striped" border="4">
+      <thead>
+          <tr  class="p-3 mb-2 bg-dark text-white">
+              <th>Id</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Subject </th>
+              <th>Feedback</th>
+              <th>Action</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let b of reviews">
+              <td> {{ b.id }} </td>
+              <td> {{ b.name}} </td>
+              <td> {{ b.email}} </td>
+              <td> {{ b.subject}} </td>
+              <td> {{ b.feedback }} </td>
+              <td><button (click)="deleteFeedback(b.id)" class="btn btn-danger" style="margin-left: 10px"> Delete</button></td>
+          </tr>
+      </tbody>
+  </table>

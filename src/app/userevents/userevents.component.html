@@ -1,0 +1,132 @@
+<!-- ======= Header ======= -->
+
+<header id="header" class="d-flex align-items-center">
+  
+  
+  <div class="container d-flex align-items-center justify-content-between">
+
+    <h1 class="logo"><a href="/userhome">Russo's Kitchen<span>.</span></a></h1>
+    <!-- Uncomment below if you prefer to use an image logo -->
+    <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>-->
+
+    <nav id="navbar" class="navbar">
+      <ul>
+
+        <li><a class="nav-link scrollto active" href="" routerLink="/userhome" routerLinkActive="active">Home</a></li>
+        <!-- <li><a class="nav-link scrollto" href="" routerLink="/userabout" routerLinkActive="active">About</a></li> -->
+        <li><a class="nav-link scrollto" href="" routerLink="/usermenu" routerLinkActive="active">Menu</a></li>
+        <li><a class="nav-link scrollto " href="" routerLink="/userspecials" routerLinkActive="active">Specials</a></li>
+        <li><a class="nav-link scrollto " href="" routerLink="/userbooktable" routerLinkActive="active">Book a Table</a></li>
+        <li class="dropdown"><span>More</span> <i class="bi bi-chevron-down"></i>
+          <ul>
+              <li class="dropdown gall"><a class="nav-link scrollto gal"><span>Gallery</span> <i class="bi bi-chevron-right"></i></a>
+                  <ul>
+                      <li><a class="nav-link scrollto dropdown gall" href="" routerLink="/userevents" routerLinkActive="active">Events</a></li>
+                      <li><a class="nav-link scrollto dropdown gall" href="" routerLink="/userchefs" routerLinkActive="active">Chefs</a></li>
+                  </ul>
+              </li>
+              <li><a href="" class="nav-link scrollto dropdown gall" routerLink="/userreviews" routerLinkActive="active"><span>Reviews</span>
+                  <i class="bi bi-chevron-right"></i></a>
+              </ul>
+          </li> 
+          <li><a class="nav-link scrollto " href="" routerLink="/login" routerLinkActive="active">Logout</a></li>
+          <!-- <li><a class="nav-link scrollto " href="" routerLink="/login" routerLinkActive="active">Hello {{fname}}</a></li> -->
+
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav>
+    <button routerLink="/addtocart" class="btn btn-primary cart-icon">
+      <i style="font-size: 20px;" class="fas fa-cart-plus"></i>
+      <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+    </button>
+
+    <!-- <a href="" class="get-started-btn scrollto" routerLink="login" routerLinkActive="active">Login</a>
+            <a href="" class="get-started-btn scrollto" routerLink="booktable" routerLinkActive="active">Book a Table</a> -->
+
+
+  </div>
+</header><!-- End Header --> 
+ 
+ <!-- ======= Gallery Section ======= -->
+ <section id="gallery" class="gallery">
+
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>Events</h2>
+        <p class="rest">Some Photos From Our Restaurant</p>
+      </div>
+    </div>
+  
+    <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+  
+      <div class="row g-0">
+  
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="assets/gallery-1.jpg" class="gallery-lightbox" data-gall="gallery-item">
+              <img src="assets/gallery-1.jpg" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+  
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="assets/gallery-2.jpg" class="gallery-lightbox" data-gall="gallery-item">
+              <img src="assets/gallery-2.jpg" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+  
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="assets/gallery-3.jpg" class="gallery-lightbox" data-gall="gallery-item">
+              <img src="assets/gallery-3.jpg" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+  
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="assets/gallery-4.jpg" class="gallery-lightbox" data-gall="gallery-item">
+              <img src="assets/gallery-4.jpg" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+  
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="assets/gallery-5.jpg" class="gallery-lightbox" data-gall="gallery-item">
+              <img src="assets/gallery-5.jpg" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+  
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="assets/gallery-6.jpg" class="gallery-lightbox" data-gall="gallery-item">
+              <img src="assets/gallery-6.jpg" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+  
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="assets/gallery-7.jpg" class="gallery-lightbox" data-gall="gallery-item">
+              <img src="assets/gallery-7.jpg" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+  
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="assets/gallery-8.jpg" class="gallery-lightbox" data-gall="gallery-item">
+              <img src="assets/gallery-8.jpg" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+  
+      </div>
+  
+    </div>
+  </section><!-- End Gallery Section -->
+  

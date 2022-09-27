@@ -1,0 +1,195 @@
+<!-- ======= Header ======= -->
+<div class="bgimg">
+  <header id="header" class="d-flex align-items-center">
+  
+  
+  <div class="container d-flex align-items-center justify-content-between">
+
+    <h1 class="logo"><a href="/userhome">Russo's Kitchen<span>.</span></a></h1>
+    <!-- Uncomment below if you prefer to use an image logo -->
+    <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>-->
+
+    <nav id="navbar" class="navbar">
+      <ul>
+
+        <li><a class="nav-link scrollto active" href="" routerLink="/userhome" routerLinkActive="active">Home</a></li>
+        <!-- <li><a class="nav-link scrollto" href="" routerLink="/userabout" routerLinkActive="active">About</a></li> -->
+        <li><a class="nav-link scrollto" href="" routerLink="/usermenu" routerLinkActive="active">Menu</a></li>
+        <li><a class="nav-link scrollto " href="" routerLink="/userspecials" routerLinkActive="active">Specials</a></li>
+        <li><a class="nav-link scrollto " href="" routerLink="/userbooktable" routerLinkActive="active">Book a Table</a></li>
+        <li class="dropdown"><span>More</span> <i class="bi bi-chevron-down"></i>
+          <ul>
+              <li class="dropdown gall"><a class="nav-link scrollto gal"><span>Gallery</span> <i class="bi bi-chevron-right"></i></a>
+                  <ul>
+                      <li><a class="nav-link scrollto dropdown gall" href="" routerLink="/userevents" routerLinkActive="active">Events</a></li>
+                      <li><a class="nav-link scrollto dropdown gall" href="" routerLink="/userchefs" routerLinkActive="active">Chefs</a></li>
+                  </ul>
+              </li>
+              <li><a href="" class="nav-link scrollto dropdown gall" routerLink="/userreviews" routerLinkActive="active"><span>Reviews</span>
+                  <i class="bi bi-chevron-right"></i></a>
+              </ul>
+          </li> 
+          <li><a class="nav-link scrollto " href="" routerLink="/login" routerLinkActive="active">Logout</a></li>
+          <!-- <li><a class="nav-link scrollto " href="" routerLink="/login" routerLinkActive="active">Hello {{fname}}</a></li> -->
+
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav>
+    <button routerLink="/addtocart" class="btn btn-primary cart-icon">
+      <i style="font-size: 20px;" class="fas fa-cart-plus"></i>
+      <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+    </button>
+
+    <!-- <a href="" class="get-started-btn scrollto" routerLink="login" routerLinkActive="active">Login</a>
+            <a href="" class="get-started-btn scrollto" routerLink="booktable" routerLinkActive="active">Book a Table</a> -->
+
+
+  </div>
+</header><!-- End Header -->
+
+
+<!-- ======= Faq Section ======= -->
+<section id="faq" class="faq">
+    <div class="container-fluid">
+
+      <div class="row">
+
+        <div class="col-lg-12 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
+
+          <div class="section-title content">
+            <h2><strong>Reviews</strong></h2>
+            <p>
+              
+            </p>
+          </div>
+
+          <div class="accordion-list">
+            <ul>
+              <li>
+                <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1">Why this Restaurant so Famous?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
+                  <p>
+                    We found the restaurant by accident and we were just blown away.. the very friendly and attentive wait staff.... the perfectly balanced salads and great quality main courses were wonderful.The cocktails were perfectly mixed - not too sweet, not too sour, and very tasty. We really appreciated the personal touches of the restaurant manager who made sure that the seats were reserved and checked back regularly to ensure everything was ok. We'll definitely be back - we loved it!
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed">Is this the Restaurant getting to much footfall<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
+                  <p>
+                    We visited this beautiful restaurant only due to some positive reviews on TripAdvisor.
+We had Kale Salad, Veg Cheese Quesadilla, Miso Seabaas and Risotto with few glasses of Mateus Rose wine. The food and wine wine was amazing.
+It had a family ambience and very courteous service.
+Worth trying...
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed">Quality of the food<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
+                  <p>
+                    Totally unexpected but the food has hit my sensibilities so much that even after a month it still stays there!!! Nothing has compared to it ever!! And I’m not even a foodie!!!!
+                  </p>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Faq Section -->
+  <br><br>
+
+  <h2 style="color: rgba(0, 0, 0, 0.904);font-size:60px;" class="text-center"> Review's of the Customers</h2>
+  <table class="table table-striped">
+      <thead>
+          <tr class="p-3 mb-2 bg-dark text-white">
+              <th>Id</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th> Subject </th>
+              <th> Feedback</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let b of reviews" class="p-3 mb-2 bg-light text-dark">
+              <td> {{ b.id }} </td>
+              <td> {{ b.name}} </td>
+              <td> {{ b.email}} </td>
+              <td> {{ b.subject}} </td>
+              <td> {{ b.feedback }} </td>
+          </tr>
+      </tbody>
+  </table>
+<br><br>
+<!-- Contact Start -->
+<div class="container-xxl py-6">
+  <div class="container">
+      <div class="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+          <p class="display-5 mb-3" style="color: rgba(15, 13, 13, 0.977);font-size: 40px;">FeedBack</p>
+          <p style="font-size: 20px;">Your Feedback Matters the Most</p>
+      </div>
+      <div class="row g-5 justify-content-center" style="border:solid 2px;">
+          <div class="col-lg-5 col-md-12 wow fadeInUp" data-wow-delay="0.1s">
+              <div class="bg-primary text-white d-flex flex-column justify-content-center h-100 p-5">
+                  <h5 class="text-white">Call Us</h5>
+                  <p class="mb-5"><i class="fa fa-phone-alt me-3"></i>+11 2210725163</p>
+                  <h5 class="text-white">Email Us</h5>
+                  <p class="mb-5"><i class="fa fa-envelope me-3"></i>russokitchen@gmail.com</p>
+                  <h5 class="text-white">Office Address</h5>
+                  <p class="mb-5"><i class="fa fa-map-marker-alt me-3"></i>St.Paul's, Hauts-de-France, France</p>
+                  <!-- <h5 class="text-white">Follow Us</h5> -->
+                  <!-- <div class="d-flex pt-2">
+                      <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i class="fab fa-twitter"></i></a>
+                      <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                      <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i class="fab fa-youtube"></i></a>
+                      <a class="btn btn-square btn-outline-light rounded-circle me-0" href=""><i class="fab fa-linkedin-in"></i></a>
+                  </div> -->
+              </div>
+          </div>
+          <div class="col-lg-7 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
+              <p class="mb-4" style="color: rgb(0, 0, 0);">For Your Valuable Feedback Let's take a step ahead and help us to be better.<a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
+              <form #review="ngForm" (ngSubmit)="savedata(review)">
+                  <div class="row g-3">
+                      <div class="col-md-6">
+                          <div class="form-floating">
+                              <input type="text" class="form-control" id="name" placeholder="Your Name" name="name" ngModel="name">
+                              <label for="fname">Your Name</label>
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="form-floating">
+                              <input type="email" class="form-control" id="email" placeholder="Your Last Name" name="email" ngModel="email">
+                              <label for="lname">Your Email</label>
+                          </div>
+                      </div>
+                      <div class="col-12">
+                          <div class="form-floating">
+                              <input type="text" class="form-control" id="subject" placeholder="Subject" name="subject" ngModel="subject">
+                              <label for="Profession">Subject</label>
+                          </div>
+                      </div>
+                      <div class="col-12">
+                          <div class="form-floating">
+                              <textarea class="form-control" placeholder="Leave a Review here" id="feedback" style="height: 200px" name="feedback" ngModel="feedback"></textarea>
+                              <label for="message">Feedback</label>
+                          </div>
+                      </div>
+                      <div class="col-12">
+                          <button class="btn btn-primary rounded-pill py-3 px-5" type="submit" (click)="getreview()">Send Message</button>
+                      </div>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+<br><br>
+<!-- Contact End -->
+</div>

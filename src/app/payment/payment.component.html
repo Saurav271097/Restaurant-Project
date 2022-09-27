@@ -1,0 +1,152 @@
+  
+<!-- <div class="min-h-screen flex justify-center items-center bg-blue-500">
+    <div class=" card rounded-lg h-auto w-3/4 bg-white">
+        <div class="flex h-full w-full ">
+            
+            <div class="left_side truncate relative rounded-l-lg h-auto w-full truncate">  -->
+                <!-- <img class="h-full w-full" src="/assets/events-8.jpg">  -->
+                <!-- <div class="h-48 w-72 opacity-70 rounded-lg  bg-blue-300 absolute top-28 left-8 ">
+                    <div class="p-2 mt-3 text-black font-semibold">
+                        <p >Card Number</p>
+                        <p class="border-b-2 text-white shown_number">0000 0000 0000 0000</p>
+                    </div>
+                    <div class="flex gap-3 mt-3">
+                        <div class="p-2 mt-2 text-black font-semibold">
+                            <p >Expiry Date</p>
+                            <p class="border-b-2 text-white shown_expiry">mm/yyyy</p>
+                        </div>
+                        <div class="p-2 mt-2 text-black font-semibold">
+                            <p >CVV</p>
+                            <p class="border-b-2 text-white shown_cvv">000</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+                 
+            
+            <div class="p-3 right_side truncate h-auto w-full bg-gray-300 rounded-r-lg">
+                <p class="mt-3 text-xl font-semibold">Payment Details</p>
+                <div class="mt-5 relative"> <input class="input_number h-12 w-full border border-white transition-all rounded-lg px-2 outline-none focus:border-blue-900" type="text" placeholder="0000 0000 0000 0000" data-slots="0" data-accept="\d" size="19" onkeyup="Number(this.value)"> <label class="text-xs absolute -top-4 left-0">Card Number</label> </div>
+                <div class="mt-7 w-full flex gap-3">
+                    <div class=" relative w-full"> 
+                    <input class="input_expiry h-12 w-full border border-white transition-all rounded-lg px-2 outline-none focus:border-blue-900" placeholder="mm/yyyy" data-slots="my" type="text" onkeyup="Expiry(this.value)"> <label class="text-xs absolute -top-4 left-0" >Expiry Date</label> </div>
+                    <div class=" relative w-full"> 
+                        <input class="input_cvv h-12 w-full border border-white transition-all rounded-lg px-2 outline-none focus:border-blue-900" type="text"  placeholder="000" data-slots="0" data-accept="\d" size="3"  onkeyup="Cvv(this.value)"> <label class="text-xs absolute -top-4 left-0">CVV</label> </div>
+                </div>
+                <div class="mt-7 relative"> <input class="h-12 w-full border border-white transition-all rounded-lg px-2 outline-none focus:border-blue-900" type="text"> <label class="text-xs absolute -top-4 left-0" onkeyup="Name(this.value)">Name on Card</label> </div>
+                <p class="mt-4">Amount due : <a class="font-semibold" href="#"><i class="fa fa-dollar"></i> {{itemAmount}}</a></p>
+                <div class="mb-5"> <button class="pay_now mt-4 outline-none rounded-lg text-white h-12 w-full bg-green-500 text-sm cursor-pointer transition-all hover:bg-green-800"><i class="fa fa-lock mr-1 "></i>Pay Now</button> </div>
+                <div class="mb-5"> <button class="pay_now mt-4 outline-none rounded-lg text-white h-12 w-full bg-green-500 text-sm cursor-pointer transition-all hover:bg-green-800"><i class="fa fa-lock mr-1 " routerLink="/usermenu" routerLinkActive="active"></i>Cancel</button> </div>
+            </div>
+        </div>
+    </div> 
+</div>
+ -->
+<!-- 
+<div class="container">
+    <div class="row">
+        <form>
+            <input type="text">
+            <input type="text">
+            <input type="text">
+            <input type="text">
+            <input type="text">
+            <input type="text">
+        </form>
+
+    </div>
+</div> -->
+<!-- <br><br>
+<div class="pay ">
+    <form #cash="ngForm" (ngSubmit)="pay(cash)">
+    <h2>Enter Account Holder name</h2>
+    <input type="text" name="accountholdername"placeholder="name"ngModel="accountholdername">
+    <h2>Enter 16-Digit Card number</h2>
+    <input type="text" name="cardnumber" ngModel="cardnumber">
+    <h2>Enter CVV number</h2>
+    <input type="text" name="cvv" required maxlength="3" ngModel="cvv">
+    <h2>Enter expiry:</h2>
+    <input type="month" name="expdate"ngModel="expdate">
+    <p class="mt-4">Amount due : <a class="font-semibold" href=""><i class="fa fa-dollar"></i>{{itemAmount}}</a></p>
+    
+    <button class="btn btn-primary rounded-pill py-3 px-5" type="submit">Pay</button>
+    <br><br>
+    <button type="button" class="btn-primary" >
+       Cancel
+    </button>
+    <button class="btn btn-primary rounded-pill py-3 px-5" type="submit" routerLink="/usermenu" routerLinkActive="active">Back</button>
+</form>
+</div>
+<br><br> -->
+
+
+<br>
+<br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="paya">
+                <form #cash="ngForm" (ngSubmit)="pay(cash)">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 text-center">
+                                <div class="text-center">
+                                    <h2 class="tex">Payment Details</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h4>Enter Account Holder name</h4>
+                                <input type="text" name="accountholdername"placeholder="name"ngModel="accountholdername">
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h4>Enter 16-Digit Card number</h4>
+    <input type="text" name="cardnumber" ngModel="cardnumber">
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h4>Enter CVV number</h4>
+                                <input type="text" name="cvv" required maxlength="3" ngModel="cvv">
+                            </div>
+                            <div class="col-lg-6">
+                                <h4>Enter expiry:</h4>
+    <input type="month" name="expdate"ngModel="expdate">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                    <p class="mt-4">Amount due : <a class="font-semibold" href=""><i class="fa fa-dollar"></i>{{itemAmount}}</a></p>
+    
+                    <button class="btn btn-primary rounded-pill py-1 px-1" type="submit">Pay</button>
+                    <br><br>
+                    <!-- <button type="button" class="btn-primary" >
+                       Cancel
+                    </button> -->
+                    <button class="btn btn-primary rounded-pill py-1 px-1" type="submit" routerLink="/usermenu" routerLinkActive="active">Back</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+</div>
+
+
+
+
